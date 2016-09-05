@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9911952-4BD3-4250-B6B8-17FF7E48A6B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>通用命令</RootNamespace>
+    <AssemblyName>通用命令</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\调试输出\通用命令\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\资源\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility, Version=1.16.330.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\调试输出\Utility\Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="通用访问">
+      <HintPath>..\..\..\调试输出\通用访问\通用访问.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="名片\IB名片_C.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="名片\IB名片_S.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="名片\M名片.cs" />
+    <Compile Include="名片\M参数.cs" />
+    <Compile Include="点名\IB点名_C.cs" />
+    <Compile Include="日志\M日志压缩完毕事件.cs" />
+    <Compile Include="日志\M日志文件.cs" />
+    <Compile Include="日志\M日志文件查询条件.cs" />
+    <Compile Include="点名\IB点名_S.cs" />
+    <Compile Include="点名\Enum.cs" />
+    <Compile Include="点名\M点名事件.cs" />
+    <Compile Include="点名\M点名条件.cs" />
+    <Compile Include="FTP\IBFTP_C.cs" />
+    <Compile Include="状态\M概要状态.cs" />
+    <Compile Include="系统\M版本记录.cs" />
+    <Compile Include="远程升级\IB远程升级_C.cs" />
+    <Compile Include="日志\IB日志_C.cs" />
+    <Compile Include="状态\IB状态_C.cs" />
+    <Compile Include="系统\IB系统_C.cs" />
+    <Compile Include="鉴权\M账号.cs" />
+    <Compile Include="链路\IB链路_C.cs" />
+    <Compile Include="鉴权\IB鉴权_C.cs" />
+    <Compile Include="日志\M过滤工程日志.cs" />
+    <Compile Include="日志\M过滤开发日志.cs" />
+    <Compile Include="FTP\IBFTP_S.cs" />
+    <Compile Include="点名\IB组播点名.cs" />
+    <Compile Include="远程升级\IB远程升级_S.cs" />
+    <Compile Include="日志\IB日志_S.cs" />
+    <Compile Include="状态\IB状态_S.cs" />
+    <Compile Include="系统\IB系统_S.cs" />
+    <Compile Include="链路\IB链路_S.cs" />
+    <Compile Include="鉴权\IB鉴权_S.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="点名\M点名事件参数.cs" />
+    <Compile Include="远程升级\M升级完成.cs" />
+    <Compile Include="远程升级\M发送参数.cs" />
+    <Compile Include="远程升级\M存储版本.cs" />
+    <Compile Include="远程升级\M请求上传.cs" />
+    <Compile Include="状态\M查询条件.cs" />
+    <Compile Include="状态\M查询结果.cs" />
+    <Compile Include="日志\Enum.cs" />
+    <Compile Include="日志\M上报工程日志.cs" />
+    <Compile Include="日志\M上报开发日志.cs" />
+    <Compile Include="状态\Enum.cs" />
+    <Compile Include="状态\M上报告警.cs" />
+    <Compile Include="链路\M链路.cs" />
+    <Compile Include="鉴权\M已登录设备.cs" />
+    <Compile Include="状态\M业务概要.cs" />
+    <Compile Include="状态\M上报清除.cs" />
+    <Compile Include="鉴权\M注销事件.cs" />
+    <Compile Include="鉴权\M登录事件.cs" />
+    <Compile Include="鉴权\M登录请求.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
